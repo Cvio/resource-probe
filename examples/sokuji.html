@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resource report: sokuji</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d1117;color:#e6edf3;
+ font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:34px 22px 70px}
+h1{font-size:24px;margin:0 0 4px;letter-spacing:-.3px}
+.sub{color:#8b949e;font-size:13px;margin-bottom:26px}
+.verdict{border-radius:10px;padding:20px 22px;margin-bottom:26px;border:1px solid}
+.verdict.ok{background:#0d2a16;border-color:#2ea04326}
+.verdict.warn{background:#2b2611;border-color:#d2992226}
+.verdict.fail{background:#2d1416;border-color:#f8514926}
+.verdict h2{margin:0 0 6px;font-size:19px}
+.verdict.ok h2{color:#3fb950} .verdict.warn h2{color:#d29922}
+.verdict.fail h2{color:#f85149}
+.verdict ul{margin:10px 0 0;padding-left:20px;color:#c9d1d9}
+.verdict li{margin:3px 0}
+.verdict .opts{margin-top:14px;padding-top:12px;border-top:1px solid #ffffff14}
+.verdict .opts b{font-size:12px;text-transform:uppercase;letter-spacing:.6px;
+ color:#8b949e;display:block;margin-bottom:6px}
+h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:#8b949e;
+ margin:32px 0 12px;font-weight:600}
+.res{margin-bottom:20px}
+.resline{display:flex;align-items:baseline;gap:10px;margin-bottom:6px;font-size:13px}
+.resline b{font-size:14px;min-width:46px}
+.need{color:#c9d1d9} .cap{color:#6e7681;margin-left:auto}
+.track{position:relative;height:26px;background:#161b22;border-radius:5px;
+ overflow:hidden;border:1px solid #30363d}
+.fill-max{position:absolute;top:0;bottom:0;left:0;background:#30363d}
+.fill-p95{position:absolute;top:0;bottom:0;left:0}
+.ok .fill-p95{background:#2ea043} .warn .fill-p95{background:#d29922}
+.fail .fill-p95{background:#da3633}
+.limit{position:absolute;top:0;bottom:0;width:2px;background:#e6edf3}
+.limit span{position:absolute;top:-1px;left:5px;font-size:10px;color:#8b949e;
+ white-space:nowrap}
+.resnote{font-size:11px;color:#6e7681;margin-top:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:9px;padding:15px 17px}
+.card h3{margin:0 0 10px;font-size:15px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+table.mini{width:100%;border-collapse:collapse;font-size:13px}
+table.mini th{text-align:left;color:#8b949e;font-weight:500;padding:3px 0}
+table.mini td{text-align:right;padding:3px 0;font-variant-numeric:tabular-nums}
+td.hd{color:#6e7681;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.meta{margin:11px 0 0;font-size:11px;color:#6e7681}
+.chartbox{background:#161b22;border:1px solid #30363d;border-radius:9px;
+ padding:14px 16px 10px;margin-bottom:16px}
+.charthead{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+.unit{color:#6e7681}
+.chart{width:100%;height:auto;display:block}
+.grid{stroke:#30363d;stroke-width:1}
+.ylab{fill:#6e7681;font-size:10px;text-anchor:end}
+.xlab{fill:#6e7681;font-size:10px;text-anchor:middle}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.key{font-size:11px;color:#8b949e;display:flex;align-items:center;gap:5px}
+.key i{width:11px;height:3px;border-radius:2px;display:inline-block}
+.machine{background:#161b22;border:1px solid #30363d;border-radius:9px;
+ padding:14px 17px;font-size:13px;color:#c9d1d9}
+.machine b{color:#e6edf3}
+footer{margin-top:40px;font-size:11px;color:#6e7681;border-top:1px solid #21262d;
+ padding-top:14px}
+</style></head><body><div class="wrap">
+
+<h1>Can these run together?</h1>
+<div class="sub">sokuji &middot; generated
+ 2026-08-14 21:44</div>
+
+<div class="verdict ok">
+  <h2>SHOULD RUN TOGETHER COMFORTABLY</h2>
+  <div style="color:#c9d1d9">Every resource has headroom at peak load.</div>
+  
+</div>
+
+<h2 class="sec">Combined demand vs capacity</h2>
+
+      <div class="res ok">
+        <div class="resline"><b>RAM</b>
+          <span class="need">need 0.57 GB
+          typical / 0.73 GB peak</span>
+          <span class="cap">of 31.64 GB</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:2.3%"></div>
+          <div class="fill-p95" style="width:1.8%"></div>
+          <div class="limit" style="left:90.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">can overflow to disk (slowly)</div>
+      </div>
+      <div class="res ok">
+        <div class="resline"><b>VRAM</b>
+          <span class="need">need 0.22 GB
+          typical / 0.22 GB peak</span>
+          <span class="cap">of 8.00 GB</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:2.8%"></div>
+          <div class="fill-p95" style="width:2.7%"></div>
+          <div class="limit" style="left:90.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">hard limit &mdash; cannot overflow to disk</div>
+      </div>
+      <div class="res ok">
+        <div class="resline"><b>CPU</b>
+          <span class="need">need 7%
+          typical / 38% peak</span>
+          <span class="cap">of 100%</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:38.3%"></div>
+          <div class="fill-p95" style="width:6.9%"></div>
+          <div class="limit" style="left:100.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">can overflow to disk (slowly)</div>
+      </div>
+
+<h2 class="sec">Cost per app <span style="text-transform:none;letter-spacing:0">
+ (above idle baseline)</span></h2>
+<div class="cards">
+      <div class="card">
+        <h3><i class="dot" style="background:#2f81f7"></i>sokuji</h3>
+        <table class="mini">
+          <tr><th></th><td class="hd">typical</td><td class="hd">peak</td></tr>
+          <tr><th>CPU</th><td>7%</td><td>38%</td></tr><tr><th>RAM</th><td>0.57 GB</td><td>0.73 GB</td></tr><tr><th>VRAM</th><td>0.22 GB</td><td>0.22 GB</td></tr>
+        </table>
+        <p class="meta">measured on LAPTOP-DRPJIMDD &middot;
+           115 samples over 120s</p>
+      </div></div>
+
+<h2 class="sec">Behaviour over time</h2>
+<div class="chartbox"><div class="charthead">CPU usage over time <span class="unit">(%)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">12</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">23</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">35</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">46</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">30s</text><text x="363.0" y="162" class="xlab">60s</text><text x="515.5" y="162" class="xlab">89s</text><text x="668.0" y="162" class="xlab">119s</text><polyline points="58.0,134.4 63.1,138.9 68.8,138.7 73.9,141.5 79.5,141.5 84.7,140.6 90.3,138.4 95.4,139.5 100.5,138.1 106.2,140.3 111.3,138.7 116.9,140.6 122.1,140.1 127.7,141.8 132.8,132.2 138.0,130.8 143.6,139.8 148.7,139.2 154.4,140.3 159.5,141.5 164.6,140.1 170.3,139.2 175.4,141.5 181.0,140.1 186.2,139.5 191.8,140.3 196.9,140.3 202.6,140.9 207.7,140.1 212.8,137.8 218.4,100.4 224.1,31.0 229.7,137.0 234.8,127.7 240.0,99.9 245.6,127.1 250.7,136.7 256.4,137.0 261.5,137.3 267.1,134.2 272.3,138.7 277.4,137.5 283.0,131.9 288.2,137.5 293.8,138.9 298.9,135.3 304.6,138.4 309.7,136.4 314.8,141.5 320.5,137.5 325.6,98.4 331.2,134.4 336.3,100.7 342.0,80.2 347.1,131.3 352.7,134.7 357.9,137.8 363.0,137.8 368.6,134.7 373.8,140.3 379.4,139.5 384.5,139.2 390.2,139.2 395.3,139.2 400.4,141.2 406.1,140.6 411.2,138.4 416.8,137.5 421.9,135.8 427.6,137.0 432.7,139.5 437.8,139.2 443.5,138.7 448.6,140.1 454.2,139.5 459.4,142.0 465.0,139.2 470.1,140.9 475.3,139.5 480.9,139.2 486.0,139.5 491.7,132.8 496.8,138.1 501.9,140.1 507.6,140.6 512.7,141.8 518.3,139.8 523.4,135.3 529.1,140.9 534.2,140.1 539.8,140.1 545.0,139.2 550.1,138.4 555.7,137.5 560.9,140.9 566.5,140.1 571.6,138.9 577.3,139.2 582.4,138.9 587.5,130.5 593.2,132.5 598.3,137.8 603.9,138.4 609.1,136.7 614.2,137.0 619.8,136.7 624.9,132.5 630.6,130.2 635.7,136.7 641.3,138.7 646.5,135.6 651.6,139.5 657.2,140.3 662.4,135.0 668.0,138.7" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>sokuji</span></div></div><div class="chartbox"><div class="charthead">RAM above idle, over time <span class="unit">(GB)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0.0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">0.2</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">0.4</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">0.6</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">0.8</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">30s</text><text x="363.0" y="162" class="xlab">60s</text><text x="515.5" y="162" class="xlab">89s</text><text x="668.0" y="162" class="xlab">119s</text><polyline points="58.0,107.2 63.1,108.3 68.8,108.4 73.9,107.9 79.5,108.1 84.7,108.4 90.3,108.4 95.4,108.3 100.5,108.3 106.2,108.4 111.3,109.7 116.9,110.1 122.1,110.2 127.7,109.0 132.8,124.1 138.0,128.6 143.6,130.0 148.7,129.9 154.4,132.5 159.5,132.3 164.6,132.1 170.3,132.2 175.4,131.9 181.0,132.9 186.2,133.2 191.8,132.1 196.9,132.2 202.6,131.9 207.7,132.5 212.8,132.3 218.4,106.3 224.1,67.3 229.7,67.7 234.8,63.9 240.0,31.0 245.6,53.9 250.7,55.2 256.4,72.9 261.5,78.2 267.1,78.7 272.3,80.1 277.4,79.8 283.0,86.4 288.2,89.0 293.8,89.0 298.9,88.9 304.6,105.1 309.7,105.0 314.8,105.8 320.5,107.1 325.6,81.1 331.2,89.8 336.3,72.1 342.0,47.2 347.1,52.4 352.7,54.3 357.9,55.7 363.0,58.3 368.6,70.6 373.8,72.9 379.4,72.8 384.5,74.1 390.2,89.7 395.3,92.9 400.4,93.1 406.1,95.6 411.2,97.7 416.8,97.9 421.9,97.0 427.6,97.8 432.7,97.6 437.8,97.8 443.5,98.1 448.6,98.4 454.2,99.5 459.4,98.5 465.0,99.9 470.1,99.6 475.3,98.3 480.9,98.3 486.0,99.5 491.7,96.2 496.8,99.3 501.9,99.0 507.6,99.5 512.7,100.3 518.3,101.4 523.4,101.0 529.1,100.7 534.2,100.3 539.8,101.4 545.0,100.7 550.1,96.9 555.7,96.9 560.9,97.2 566.5,97.3 571.6,97.4 577.3,97.6 582.4,96.4 587.5,95.0 593.2,92.0 598.3,91.7 603.9,92.2 609.1,94.0 614.2,94.1 619.8,96.1 624.9,92.8 630.6,90.8 635.7,97.2 641.3,110.1 646.5,112.1 651.6,113.5 657.2,113.6 662.4,97.7 668.0,113.6" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>sokuji</span></div></div><div class="chartbox"><div class="charthead">VRAM above idle, over time <span class="unit">(GB)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0.0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">0.1</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">0.1</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">0.2</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">0.3</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">30s</text><text x="363.0" y="162" class="xlab">60s</text><text x="515.5" y="162" class="xlab">89s</text><text x="668.0" y="162" class="xlab">119s</text><polyline points="58.0,72.4 63.1,72.4 68.8,72.4 73.9,72.4 79.5,72.4 84.7,72.4 90.3,72.4 95.4,72.4 100.5,72.4 106.2,72.4 111.3,72.4 116.9,72.4 122.1,72.4 127.7,72.4 132.8,72.4 138.0,72.4 143.6,72.4 148.7,72.4 154.4,72.4 159.5,72.4 164.6,72.4 170.3,72.4 175.4,72.4 181.0,72.4 186.2,72.4 191.8,72.4 196.9,72.4 202.6,72.4 207.7,72.4 212.8,72.4 218.4,41.9 224.1,62.4 229.7,62.4 234.8,52.4 240.0,42.4 245.6,43.9 250.7,43.9 256.4,43.9 261.5,43.9 267.1,37.0 272.3,37.0 277.4,37.0 283.0,37.0 288.2,37.0 293.8,37.0 298.9,37.0 304.6,46.4 309.7,68.4 314.8,68.4 320.5,68.4 325.6,78.4 331.2,76.9 336.3,59.4 342.0,33.5 347.1,31.0 352.7,31.5 357.9,32.5 363.0,32.5 368.6,32.5 373.8,32.5 379.4,32.5 384.5,32.5 390.2,33.5 395.3,35.0 400.4,35.0 406.1,35.0 411.2,35.0 416.8,35.0 421.9,40.9 427.6,40.9 432.7,40.9 437.8,40.9 443.5,40.9 448.6,40.9 454.2,40.9 459.4,40.9 465.0,40.9 470.1,40.9 475.3,40.9 480.9,40.9 486.0,40.9 491.7,40.9 496.8,40.9 501.9,40.9 507.6,40.9 512.7,40.9 518.3,40.9 523.4,40.9 529.1,40.9 534.2,40.9 539.8,40.9 545.0,40.9 550.1,40.9 555.7,40.9 560.9,40.9 566.5,40.9 571.6,40.9 577.3,40.9 582.4,40.9 587.5,40.9 593.2,40.9 598.3,38.4 603.9,38.4 609.1,38.4 614.2,38.9 619.8,38.9 624.9,42.4 630.6,38.9 635.7,44.9 641.3,51.4 646.5,50.9 651.6,50.9 657.2,50.9 662.4,50.9 668.0,50.4" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>sokuji</span></div></div><div class="chartbox"><div class="charthead">GPU utilisation over time <span class="unit">(%)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">20</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">40</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">60</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">79</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">30s</text><text x="363.0" y="162" class="xlab">60s</text><text x="515.5" y="162" class="xlab">89s</text><text x="668.0" y="162" class="xlab">119s</text><polyline points="58.0,139.1 63.1,130.9 68.8,144.0 73.9,144.0 79.5,144.0 84.7,144.0 90.3,140.7 95.4,144.0 100.5,144.0 106.2,144.0 111.3,144.0 116.9,139.1 122.1,144.0 127.7,144.0 132.8,144.0 138.0,139.1 143.6,144.0 148.7,144.0 154.4,144.0 159.5,144.0 164.6,139.1 170.3,144.0 175.4,144.0 181.0,144.0 186.2,140.7 191.8,144.0 196.9,144.0 202.6,144.0 207.7,144.0 212.8,121.1 218.4,144.0 224.1,139.1 229.7,139.1 234.8,144.0 240.0,91.6 245.6,91.6 250.7,137.4 256.4,144.0 261.5,130.9 267.1,144.0 272.3,124.3 277.4,144.0 283.0,129.3 288.2,135.8 293.8,127.6 298.9,144.0 304.6,137.4 309.7,144.0 314.8,144.0 320.5,31.0 325.6,132.5 331.2,144.0 336.3,139.1 342.0,89.9 347.1,134.2 352.7,103.0 357.9,144.0 363.0,144.0 368.6,144.0 373.8,144.0 379.4,135.8 384.5,144.0 390.2,121.1 395.3,144.0 400.4,144.0 406.1,144.0 411.2,144.0 416.8,139.1 421.9,68.6 427.6,144.0 432.7,106.3 437.8,144.0 443.5,144.0 448.6,144.0 454.2,144.0 459.4,142.4 465.0,144.0 470.1,144.0 475.3,144.0 480.9,139.1 486.0,144.0 491.7,144.0 496.8,144.0 501.9,144.0 507.6,142.4 512.7,144.0 518.3,144.0 523.4,144.0 529.1,139.1 534.2,144.0 539.8,144.0 545.0,144.0 550.1,144.0 555.7,142.4 560.9,144.0 566.5,144.0 571.6,140.7 577.3,129.3 582.4,122.7 587.5,73.6 593.2,144.0 598.3,137.4 603.9,140.7 609.1,68.6 614.2,81.7 619.8,108.0 624.9,140.7 630.6,73.6 635.7,139.1 641.3,144.0 646.5,40.8 651.6,144.0 657.2,144.0 662.4,144.0 668.0,144.0" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>sokuji</span></div></div>
+
+<h2 class="sec">Target machine</h2>
+<div class="machine">
+  <b>LAPTOP-DRPJIMDD</b> &middot; Windows 11<br>
+  20 logical cores &middot;
+  31.6 GB RAM &middot; NVIDIA GeForce RTX 4070 Laptop GPU (8.0 GB)
+</div>
+
+<footer>
+  <b>typical</b> = 95th percentile, the honest "both apps busy" number.
+  <b>peak</b> = absolute maximum observed.<br>
+  Peaks from different apps rarely coincide, so summing peaks over-predicts
+  conflict; summing typicals is the better guide.
+  RAM can overflow to disk and merely slow down &mdash; VRAM cannot, and will
+  fail outright.
+  Usable capacity reserves 10% (min 2 GB RAM / 512 MB VRAM) for the operating
+  system.
+</footer>
+</div></body></html>

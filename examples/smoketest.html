@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resource report: smoketest</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d1117;color:#e6edf3;
+ font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:34px 22px 70px}
+h1{font-size:24px;margin:0 0 4px;letter-spacing:-.3px}
+.sub{color:#8b949e;font-size:13px;margin-bottom:26px}
+.verdict{border-radius:10px;padding:20px 22px;margin-bottom:26px;border:1px solid}
+.verdict.ok{background:#0d2a16;border-color:#2ea04326}
+.verdict.warn{background:#2b2611;border-color:#d2992226}
+.verdict.fail{background:#2d1416;border-color:#f8514926}
+.verdict h2{margin:0 0 6px;font-size:19px}
+.verdict.ok h2{color:#3fb950} .verdict.warn h2{color:#d29922}
+.verdict.fail h2{color:#f85149}
+.verdict ul{margin:10px 0 0;padding-left:20px;color:#c9d1d9}
+.verdict li{margin:3px 0}
+.verdict .opts{margin-top:14px;padding-top:12px;border-top:1px solid #ffffff14}
+.verdict .opts b{font-size:12px;text-transform:uppercase;letter-spacing:.6px;
+ color:#8b949e;display:block;margin-bottom:6px}
+h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:#8b949e;
+ margin:32px 0 12px;font-weight:600}
+.res{margin-bottom:20px}
+.resline{display:flex;align-items:baseline;gap:10px;margin-bottom:6px;font-size:13px}
+.resline b{font-size:14px;min-width:46px}
+.need{color:#c9d1d9} .cap{color:#6e7681;margin-left:auto}
+.track{position:relative;height:26px;background:#161b22;border-radius:5px;
+ overflow:hidden;border:1px solid #30363d}
+.fill-max{position:absolute;top:0;bottom:0;left:0;background:#30363d}
+.fill-p95{position:absolute;top:0;bottom:0;left:0}
+.ok .fill-p95{background:#2ea043} .warn .fill-p95{background:#d29922}
+.fail .fill-p95{background:#da3633}
+.limit{position:absolute;top:0;bottom:0;width:2px;background:#e6edf3}
+.limit span{position:absolute;top:-1px;left:5px;font-size:10px;color:#8b949e;
+ white-space:nowrap}
+.resnote{font-size:11px;color:#6e7681;margin-top:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:9px;padding:15px 17px}
+.card h3{margin:0 0 10px;font-size:15px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+table.mini{width:100%;border-collapse:collapse;font-size:13px}
+table.mini th{text-align:left;color:#8b949e;font-weight:500;padding:3px 0}
+table.mini td{text-align:right;padding:3px 0;font-variant-numeric:tabular-nums}
+td.hd{color:#6e7681;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.meta{margin:11px 0 0;font-size:11px;color:#6e7681}
+.chartbox{background:#161b22;border:1px solid #30363d;border-radius:9px;
+ padding:14px 16px 10px;margin-bottom:16px}
+.charthead{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+.unit{color:#6e7681}
+.chart{width:100%;height:auto;display:block}
+.grid{stroke:#30363d;stroke-width:1}
+.ylab{fill:#6e7681;font-size:10px;text-anchor:end}
+.xlab{fill:#6e7681;font-size:10px;text-anchor:middle}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.key{font-size:11px;color:#8b949e;display:flex;align-items:center;gap:5px}
+.key i{width:11px;height:3px;border-radius:2px;display:inline-block}
+.machine{background:#161b22;border:1px solid #30363d;border-radius:9px;
+ padding:14px 17px;font-size:13px;color:#c9d1d9}
+.machine b{color:#e6edf3}
+footer{margin-top:40px;font-size:11px;color:#6e7681;border-top:1px solid #21262d;
+ padding-top:14px}
+</style></head><body><div class="wrap">
+
+<h1>Can these run together?</h1>
+<div class="sub">smoketest &middot; generated
+ 2026-08-14 21:34</div>
+
+<div class="verdict ok">
+  <h2>SHOULD RUN TOGETHER COMFORTABLY</h2>
+  <div style="color:#c9d1d9">Every resource has headroom at peak load.</div>
+  
+</div>
+
+<h2 class="sec">Combined demand vs capacity</h2>
+
+      <div class="res ok">
+        <div class="resline"><b>RAM</b>
+          <span class="need">need 0.35 GB
+          typical / 0.38 GB peak</span>
+          <span class="cap">of 31.64 GB</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:1.2%"></div>
+          <div class="fill-p95" style="width:1.1%"></div>
+          <div class="limit" style="left:90.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">can overflow to disk (slowly)</div>
+      </div>
+      <div class="res ok">
+        <div class="resline"><b>VRAM</b>
+          <span class="need">need 0.18 GB
+          typical / 0.19 GB peak</span>
+          <span class="cap">of 8.00 GB</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:2.3%"></div>
+          <div class="fill-p95" style="width:2.3%"></div>
+          <div class="limit" style="left:90.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">hard limit &mdash; cannot overflow to disk</div>
+      </div>
+      <div class="res ok">
+        <div class="resline"><b>CPU</b>
+          <span class="need">need 4%
+          typical / 6% peak</span>
+          <span class="cap">of 100%</span>
+        </div>
+        <div class="track">
+          <div class="fill-max" style="width:5.8%"></div>
+          <div class="fill-p95" style="width:4.2%"></div>
+          <div class="limit" style="left:100.0%"><span>usable</span></div>
+        </div>
+        <div class="resnote">can overflow to disk (slowly)</div>
+      </div>
+
+<h2 class="sec">Cost per app <span style="text-transform:none;letter-spacing:0">
+ (above idle baseline)</span></h2>
+<div class="cards">
+      <div class="card">
+        <h3><i class="dot" style="background:#2f81f7"></i>smoketest</h3>
+        <table class="mini">
+          <tr><th></th><td class="hd">typical</td><td class="hd">peak</td></tr>
+          <tr><th>CPU</th><td>4%</td><td>6%</td></tr><tr><th>RAM</th><td>0.35 GB</td><td>0.38 GB</td></tr><tr><th>VRAM</th><td>0.18 GB</td><td>0.19 GB</td></tr>
+        </table>
+        <p class="meta">measured on LAPTOP-DRPJIMDD &middot;
+           10 samples over 10s</p>
+      </div></div>
+
+<h2 class="sec">Behaviour over time</h2>
+<div class="chartbox"><div class="charthead">CPU usage over time <span class="unit">(%)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">5</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">9</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">14</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">18</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">2s</text><text x="363.0" y="162" class="xlab">5s</text><text x="515.5" y="162" class="xlab">7s</text><text x="668.0" y="162" class="xlab">9s</text><polyline points="58.0,56.6 129.4,70.1 194.3,83.6 265.7,31.0 330.6,65.8 401.9,65.8 466.8,76.5 538.2,121.2 603.1,115.6 668.0,102.1" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>smoketest</span></div></div><div class="chartbox"><div class="charthead">RAM above idle, over time <span class="unit">(GB)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0.0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">0.1</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">0.2</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">0.3</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">0.4</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">2s</text><text x="363.0" y="162" class="xlab">5s</text><text x="515.5" y="162" class="xlab">7s</text><text x="668.0" y="162" class="xlab">9s</text><polyline points="58.0,97.8 129.4,31.0 194.3,109.1 265.7,96.8 330.6,85.2 401.9,50.2 466.8,94.0 538.2,98.0 603.1,97.7 668.0,144.0" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>smoketest</span></div></div><div class="chartbox"><div class="charthead">VRAM above idle, over time <span class="unit">(GB)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0.0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">0.1</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">0.1</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">0.2</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">0.2</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">2s</text><text x="363.0" y="162" class="xlab">5s</text><text x="515.5" y="162" class="xlab">7s</text><text x="668.0" y="162" class="xlab">9s</text><polyline points="58.0,131.6 129.4,144.0 194.3,133.4 265.7,39.8 330.6,31.0 401.9,61.6 466.8,34.5 538.2,62.8 603.1,62.8 668.0,64.5" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>smoketest</span></div></div><div class="chartbox"><div class="charthead">GPU utilisation over time <span class="unit">(%)</span></div><svg viewBox="0 0 680 170" class="chart" preserveAspectRatio="xMidYMid meet"><line x1="58" y1="144.0" x2="668" y2="144.0" class="grid"/><text x="51" y="147.5" class="ylab">0</text><line x1="58" y1="111.5" x2="668" y2="111.5" class="grid"/><text x="51" y="115.0" class="ylab">18</text><line x1="58" y1="79.0" x2="668" y2="79.0" class="grid"/><text x="51" y="82.5" class="ylab">36</text><line x1="58" y1="46.5" x2="668" y2="46.5" class="grid"/><text x="51" y="50.0" class="ylab">54</text><line x1="58" y1="14.0" x2="668" y2="14.0" class="grid"/><text x="51" y="17.5" class="ylab">72</text><text x="58.0" y="162" class="xlab">0s</text><text x="210.5" y="162" class="xlab">2s</text><text x="363.0" y="162" class="xlab">5s</text><text x="515.5" y="162" class="xlab">7s</text><text x="668.0" y="162" class="xlab">9s</text><polyline points="58.0,31.0 129.4,86.6 194.3,77.6 265.7,90.2 330.6,81.2 401.9,79.4 466.8,68.6 538.2,88.4 603.1,83.0 668.0,81.2" fill="none" stroke="#2f81f7" stroke-width="2" stroke-linejoin="round"/></svg><div class="legend"><span class="key"><i style="background:#2f81f7"></i>smoketest</span></div></div>
+
+<h2 class="sec">Target machine</h2>
+<div class="machine">
+  <b>LAPTOP-DRPJIMDD</b> &middot; Windows 11<br>
+  20 logical cores &middot;
+  31.6 GB RAM &middot; NVIDIA GeForce RTX 4070 Laptop GPU (8.0 GB)
+</div>
+
+<footer>
+  <b>typical</b> = 95th percentile, the honest "both apps busy" number.
+  <b>peak</b> = absolute maximum observed.<br>
+  Peaks from different apps rarely coincide, so summing peaks over-predicts
+  conflict; summing typicals is the better guide.
+  RAM can overflow to disk and merely slow down &mdash; VRAM cannot, and will
+  fail outright.
+  Usable capacity reserves 10% (min 2 GB RAM / 512 MB VRAM) for the operating
+  system.
+</footer>
+</div></body></html>
